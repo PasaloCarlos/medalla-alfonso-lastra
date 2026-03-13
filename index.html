@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medalla Alfonso Lastra Chárriez — Yabucoa</title>
+  <meta name="description" content="Reconocimiento a estudiantes Yabucoeños que reflejan los valores de servicio, justicia social, derechos civiles, compromiso y liderazgo.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Medalla Alfonso Lastra Chárriez">
+  <meta property="og:description" content="Reconocimiento a estudiantes Yabucoeños por su liderazgo, servicio y compromiso con la justicia social.">
+  <meta property="og:image" content="images/alfonso.jpeg">
+  <meta property="og:type" content="website">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            yabucoa: {
+              purple: '#5B0E6E',
+              'purple-dark': '#3D0A4A',
+              green: '#0E6E1A',
+              'green-dark': '#0A4A12',
+              gold: '#C8A832',
+              'gold-light': '#E8D070',
+              cream: '#FDF8F0',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
+
+    html { scroll-behavior: smooth; }
+
+    .font-display { font-family: 'Playfair Display', Georgia, serif; }
+    .font-body { font-family: 'Inter', system-ui, sans-serif; }
+
+    .hero-bg {
+      background: linear-gradient(135deg, #3D0A4A 0%, #5B0E6E 40%, #0E6E1A 100%);
+    }
+
+    .medal-glow {
+      filter: drop-shadow(0 0 30px rgba(200, 168, 50, 0.4));
+    }
+
+    .value-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(91, 14, 110, 0.15);
+    }
+
+    .value-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .section-divider {
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(90deg, #5B0E6E, #C8A832, #0E6E1A);
+    }
+
+    .quote-border {
+      border-left: 4px solid;
+      border-image: linear-gradient(to bottom, #5B0E6E, #C8A832) 1;
+    }
+
+    .nav-glass {
+      background: rgba(61, 10, 74, 0.9);
+      backdrop-filter: blur(12px);
+    }
+  </style>
+</head>
+<body class="font-body text-gray-800 bg-white">
+
+  <!-- Navigation -->
+  <nav id="navbar" class="fixed top-0 w-full z-50 nav-glass transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center gap-3">
+          <img src="images/shield.png" alt="Escudo de Yabucoa" class="h-10 w-auto">
+          <span class="font-display text-white font-semibold text-sm sm:text-base">Medalla Alfonso Lastra</span>
+        </div>
+        <!-- Mobile menu button -->
+        <button id="mobile-menu-btn" class="sm:hidden text-white p-2" aria-label="Menú">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+        <div class="hidden sm:flex items-center gap-6">
+          <a href="#mision" class="text-white/80 hover:text-yabucoa-gold-light text-sm transition-colors">Misión</a>
+          <a href="#valores" class="text-white/80 hover:text-yabucoa-gold-light text-sm transition-colors">Valores</a>
+          <a href="#objetivos" class="text-white/80 hover:text-yabucoa-gold-light text-sm transition-colors">Objetivos</a>
+          <a href="#mensaje" class="text-white/80 hover:text-yabucoa-gold-light text-sm transition-colors">Mensaje</a>
+          <a href="#evento" class="text-white/80 hover:text-yabucoa-gold-light text-sm transition-colors">Evento</a>
+        </div>
+      </div>
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="hidden sm:hidden pb-4">
+        <a href="#mision" class="block py-2 text-white/80 hover:text-yabucoa-gold-light text-sm">Misión</a>
+        <a href="#valores" class="block py-2 text-white/80 hover:text-yabucoa-gold-light text-sm">Valores</a>
+        <a href="#objetivos" class="block py-2 text-white/80 hover:text-yabucoa-gold-light text-sm">Objetivos</a>
+        <a href="#mensaje" class="block py-2 text-white/80 hover:text-yabucoa-gold-light text-sm">Mensaje</a>
+        <a href="#evento" class="block py-2 text-white/80 hover:text-yabucoa-gold-light text-sm">Evento</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero-bg min-h-screen flex items-center relative overflow-hidden">
+    <!-- Subtle pattern overlay -->
+    <div class="absolute inset-0 opacity-5">
+      <div class="absolute inset-0" style="background-image: url('images/Flag_of_Yabucoa.svg.png'); background-size: cover; background-position: center;"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 relative z-10 w-full">
+      <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+        <!-- Text -->
+        <div class="flex-1 text-center lg:text-left">
+          <p class="text-yabucoa-gold-light font-medium tracking-widest uppercase text-sm mb-4">Yabucoa, Puerto Rico</p>
+          <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+            Medalla<br>
+            <span class="text-yabucoa-gold-light">Alfonso Lastra</span><br>
+            Chárriez
+          </h1>
+          <p class="text-white/80 text-lg sm:text-xl max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
+            Reconociendo a estudiantes Yabucoeños que, con su ejemplo y acciones, reflejan los valores de servicio, justicia social y liderazgo.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <a href="#mision" class="inline-block bg-yabucoa-gold text-yabucoa-purple-dark font-semibold px-8 py-3 rounded-lg hover:bg-yabucoa-gold-light transition-colors text-center">
+              Conoce Más
+            </a>
+            <a href="#evento" class="inline-block border-2 border-white/40 text-white font-medium px-8 py-3 rounded-lg hover:bg-white/10 transition-colors text-center">
+              Detalles del Evento
+            </a>
+          </div>
+        </div>
+        <!-- Medal Image -->
+        <div class="flex-shrink-0">
+          <img src="images/alfonso.jpeg" alt="Medalla Alfonso Lastra Chárriez — Liderazgo, Compromiso, Servicio, Justicia Social (1887–1946)"
+               class="w-72 sm:w-80 lg:w-96 rounded-full medal-glow border-4 border-yabucoa-gold/30">
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      <svg class="w-6 h-6 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+      </svg>
+    </div>
+  </header>
+
+  <!-- Misión y Visión -->
+  <section id="mision" class="py-20 sm:py-28 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-yabucoa-purple mb-4">Misión y Visión</h2>
+        <div class="section-divider mx-auto"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12 lg:gap-16">
+        <!-- Misión -->
+        <div class="bg-gradient-to-br from-yabucoa-purple/5 to-transparent p-8 rounded-2xl">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-12 h-12 bg-yabucoa-purple/10 rounded-xl flex items-center justify-center">
+              <svg class="w-6 h-6 text-yabucoa-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+            </div>
+            <h3 class="font-display text-2xl font-bold text-yabucoa-purple">Misión</h3>
+          </div>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            La Medalla Alfonso Lastra Chárriez tiene como misión reconocer a estudiantes Yabucoeños que, con su ejemplo y acciones, reflejan los valores que Don Alfonso Lastra Chárriez promovió durante su vida: <strong>servicio, justicia social, defensa de los derechos civiles, compromiso con la sociedad y liderazgo</strong>.
+          </p>
+          <p class="text-gray-700 leading-relaxed">
+            Este reconocimiento no solo celebra a quienes actúan con integridad y responsabilidad dentro de la comunidad, sino que también busca inspirar a otros jóvenes a involucrarse activamente en la construcción de un Yabucoa más justo, solidario y consciente de su identidad.
+          </p>
+        </div>
+
+        <!-- Visión -->
+        <div class="bg-gradient-to-br from-yabucoa-green/5 to-transparent p-8 rounded-2xl">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-12 h-12 bg-yabucoa-green/10 rounded-xl flex items-center justify-center">
+              <svg class="w-6 h-6 text-yabucoa-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+              </svg>
+            </div>
+            <h3 class="font-display text-2xl font-bold text-yabucoa-green">Visión</h3>
+          </div>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            La Medalla Alfonso Lastra Chárriez aspira a convertirse en un símbolo de orgullo, identidad y motivación para todos los estudiantes Yabucoeños. Buscamos que cada joven reconocido comprenda que el liderazgo y el compromiso social van más allá de los logros personales: son actos de servicio, defensa de la justicia y protección de los derechos de todos.
+          </p>
+          <p class="text-gray-700 leading-relaxed">
+            Queremos que cada galardonado se convierta en un ejemplo vivo de los valores de Don Alfonso Lastra Chárriez, inspirando a otros jóvenes a seguir su camino de servicio, compromiso y liderazgo.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Valores -->
+  <section id="valores" class="py-20 sm:py-28 bg-yabucoa-cream">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-yabucoa-purple mb-4">Valores de la Medalla</h2>
+        <div class="section-divider mx-auto"></div>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Servicio -->
+        <div class="value-card bg-white p-8 rounded-2xl border border-gray-100">
+          <div class="w-14 h-14 bg-yabucoa-purple/10 rounded-2xl flex items-center justify-center mb-5">
+            <svg class="w-7 h-7 text-yabucoa-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+            </svg>
+          </div>
+          <h3 class="font-display text-xl font-bold text-yabucoa-purple mb-3">Servicio</h3>
+          <p class="text-gray-600 leading-relaxed">Actuar con entrega y dedicación en beneficio de la comunidad, poniendo las necesidades colectivas por encima de las individuales.</p>
+        </div>
+
+        <!-- Justicia Social -->
+        <div class="value-card bg-white p-8 rounded-2xl border border-gray-100">
+          <div class="w-14 h-14 bg-yabucoa-green/10 rounded-2xl flex items-center justify-center mb-5">
+            <svg class="w-7 h-7 text-yabucoa-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l3 9a5.002 5.002 0 01-6.001 0M18 7l-3 9m-5.097-9L12 5"/>
+            </svg>
+          </div>
+          <h3 class="font-display text-xl font-bold text-yabucoa-purple mb-3">Justicia Social</h3>
+          <p class="text-gray-600 leading-relaxed">Promover la equidad, la igualdad de oportunidades y el bienestar de todos, trabajando para reducir las desigualdades dentro de la sociedad.</p>
+        </div>
+
+        <!-- Derechos Civiles -->
+        <div class="value-card bg-white p-8 rounded-2xl border border-gray-100">
+          <div class="w-14 h-14 bg-yabucoa-gold/20 rounded-2xl flex items-center justify-center mb-5">
+            <svg class="w-7 h-7 text-yabucoa-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+          </div>
+          <h3 class="font-display text-xl font-bold text-yabucoa-purple mb-3">Defensa de los Derechos Civiles</h3>
+          <p class="text-gray-600 leading-relaxed">Proteger y velar por los derechos fundamentales de todas las personas, contribuyendo a la creación de una sociedad más justa y respetuosa.</p>
+        </div>
+
+        <!-- Compromiso -->
+        <div class="value-card bg-white p-8 rounded-2xl border border-gray-100 sm:col-span-1">
+          <div class="w-14 h-14 bg-yabucoa-purple/10 rounded-2xl flex items-center justify-center mb-5">
+            <svg class="w-7 h-7 text-yabucoa-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </div>
+          <h3 class="font-display text-xl font-bold text-yabucoa-purple mb-3">Compromiso con la Sociedad</h3>
+          <p class="text-gray-600 leading-relaxed">Participar activamente en iniciativas y proyectos que fortalezcan la comunidad, demostrando responsabilidad y solidaridad.</p>
+        </div>
+
+        <!-- Liderazgo -->
+        <div class="value-card bg-white p-8 rounded-2xl border border-gray-100 sm:col-span-1">
+          <div class="w-14 h-14 bg-yabucoa-green/10 rounded-2xl flex items-center justify-center mb-5">
+            <svg class="w-7 h-7 text-yabucoa-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+            </svg>
+          </div>
+          <h3 class="font-display text-xl font-bold text-yabucoa-purple mb-3">Liderazgo</h3>
+          <p class="text-gray-600 leading-relaxed">Guiar con ejemplo, inspirando a otros a actuar con integridad, responsabilidad y dedicación al servicio de los demás.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Objetivos -->
+  <section id="objetivos" class="py-20 sm:py-28 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-yabucoa-purple mb-4">Objetivos Generales</h2>
+        <div class="section-divider mx-auto"></div>
+      </div>
+
+      <div class="space-y-6">
+        <div class="flex gap-4 items-start">
+          <div class="flex-shrink-0 w-8 h-8 bg-yabucoa-purple rounded-full flex items-center justify-center mt-0.5">
+            <span class="text-white font-semibold text-sm">1</span>
+          </div>
+          <p class="text-gray-700 leading-relaxed">Reconocer públicamente a estudiantes Yabucoeños que destacan por su liderazgo, compromiso con la comunidad y promoción de la justicia social.</p>
+        </div>
+
+        <div class="flex gap-4 items-start">
+          <div class="flex-shrink-0 w-8 h-8 bg-yabucoa-purple rounded-full flex items-center justify-center mt-0.5">
+            <span class="text-white font-semibold text-sm">2</span>
+          </div>
+          <p class="text-gray-700 leading-relaxed">Mantener vivo el legado de Don Alfonso Lastra Chárriez, recordando su dedicación a la defensa de los derechos civiles y al bienestar de todos los ciudadanos.</p>
+        </div>
+
+        <div class="flex gap-4 items-start">
+          <div class="flex-shrink-0 w-8 h-8 bg-yabucoa-green rounded-full flex items-center justify-center mt-0.5">
+            <span class="text-white font-semibold text-sm">3</span>
+          </div>
+          <p class="text-gray-700 leading-relaxed">Inspirar a los jóvenes a asumir un rol activo en la sociedad, participando en iniciativas que fortalezcan la cohesión y la calidad de vida en su municipio.</p>
+        </div>
+
+        <div class="flex gap-4 items-start">
+          <div class="flex-shrink-0 w-8 h-8 bg-yabucoa-green rounded-full flex items-center justify-center mt-0.5">
+            <span class="text-white font-semibold text-sm">4</span>
+          </div>
+          <p class="text-gray-700 leading-relaxed">Promover la cultura del servicio comunitario, la responsabilidad social y la solidaridad entre los estudiantes.</p>
+        </div>
+
+        <div class="flex gap-4 items-start">
+          <div class="flex-shrink-0 w-8 h-8 bg-yabucoa-gold rounded-full flex items-center justify-center mt-0.5">
+            <span class="text-white font-semibold text-sm">5</span>
+          </div>
+          <p class="text-gray-700 leading-relaxed">Fomentar la transmisión de estos valores a nuevas generaciones, asegurando que el respeto, la justicia y el liderazgo sean pilares de nuestra comunidad.</p>
+        </div>
+
+        <div class="flex gap-4 items-start">
+          <div class="flex-shrink-0 w-8 h-8 bg-yabucoa-gold rounded-full flex items-center justify-center mt-0.5">
+            <span class="text-white font-semibold text-sm">6</span>
+          </div>
+          <p class="text-gray-700 leading-relaxed">Crear conciencia sobre la importancia de la memoria histórica, destacando la contribución de líderes como Don Alfonso a la construcción de un Puerto Rico más justo y equitativo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mensaje del Legislador -->
+  <section id="mensaje" class="py-20 sm:py-28 bg-gradient-to-br from-yabucoa-purple-dark to-yabucoa-purple text-white relative overflow-hidden">
+    <!-- Decorative elements -->
+    <div class="absolute top-0 right-0 w-64 h-64 bg-yabucoa-gold/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+    <div class="absolute bottom-0 left-0 w-48 h-48 bg-yabucoa-green/5 rounded-full translate-y-1/2 -translate-x-1/2"></div>
+
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center mb-12">
+        <h2 class="font-display text-3xl sm:text-4xl font-bold mb-4">Mensaje del Legislador Municipal</h2>
+        <div class="section-divider mx-auto"></div>
+      </div>
+
+      <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 sm:p-12">
+        <svg class="w-10 h-10 text-yabucoa-gold-light mb-6 opacity-60" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+        </svg>
+        <p class="text-white/90 text-lg leading-relaxed mb-6">
+          Es un honor para mí reconocer a los estudiantes Yabucoeños con la Medalla Alfonso Lastra Chárriez, un galardón que representa mucho más que un simple reconocimiento: es un homenaje a los valores y principios que Don Alfonso Lastra Chárriez, gran ilustre e hijo de Yabucoa defendió con pasión y dedicación.
+        </p>
+        <p class="text-white/90 text-lg leading-relaxed mb-6">
+          Esta medalla celebra a los jóvenes que, a través de su compromiso, servicio, liderazgo y defensa de los derechos civiles, contribuyen al fortalecimiento de nuestra comunidad y al progreso de Puerto Rico. Don Alfonso nos enseñó que el verdadero liderazgo se mide por la capacidad de impactar positivamente a otros y de trabajar por el bienestar colectivo.
+        </p>
+        <p class="text-white/90 text-lg leading-relaxed mb-8">
+          Al otorgar esta medalla, queremos inspirar a todos los estudiantes Yabucoeños a seguir su ejemplo, a participar activamente en la vida de su municipio y a mantener siempre en alto el orgullo por Yabucoa y por nuestra patria. Recordemos que cada acción positiva, cada iniciativa de servicio y cada esfuerzo por defender la justicia, construye un futuro más sólido y equitativo para todos.
+        </p>
+
+        <div class="border-t border-white/20 pt-6">
+          <p class="font-display text-xl font-bold text-yabucoa-gold-light">Hon. Irving J. Cintrón</p>
+          <p class="text-white/60 mt-1">Legislador Municipal</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Evento -->
+  <section id="evento" class="py-20 sm:py-28 bg-yabucoa-cream">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-yabucoa-purple mb-4">Ceremonia de Premiación</h2>
+        <div class="section-divider mx-auto"></div>
+        <p class="text-gray-600 mt-6 text-lg">Primera edición de la Medalla Alfonso Lastra Chárriez</p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+        <div class="bg-gradient-to-r from-yabucoa-purple to-yabucoa-green p-1"></div>
+        <div class="p-8 sm:p-12">
+          <div class="grid sm:grid-cols-3 gap-8 text-center">
+            <!-- Fecha -->
+            <div>
+              <div class="w-16 h-16 bg-yabucoa-purple/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-yabucoa-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <h3 class="font-display text-lg font-bold text-yabucoa-purple mb-1">Fecha</h3>
+              <p class="text-gray-600">Por confirmar</p>
+            </div>
+
+            <!-- Hora -->
+            <div>
+              <div class="w-16 h-16 bg-yabucoa-green/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-yabucoa-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <h3 class="font-display text-lg font-bold text-yabucoa-purple mb-1">Hora</h3>
+              <p class="text-gray-600">Por confirmar</p>
+            </div>
+
+            <!-- Lugar -->
+            <div>
+              <div class="w-16 h-16 bg-yabucoa-gold/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-yabucoa-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+              </div>
+              <h3 class="font-display text-lg font-bold text-yabucoa-purple mb-1">Lugar</h3>
+              <p class="text-gray-600">Por confirmar</p>
+            </div>
+          </div>
+
+          <div class="mt-10 text-center">
+            <p class="text-gray-500 italic">Los detalles del evento serán anunciados próximamente.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-yabucoa-purple-dark text-white py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-4">
+          <img src="images/shield.png" alt="Escudo de Yabucoa" class="h-14 w-auto">
+          <div>
+            <p class="font-display text-lg font-bold">Medalla Alfonso Lastra Chárriez</p>
+            <p class="text-white/60 text-sm">Yabucoa, Puerto Rico</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <img src="images/Flag_of_Yabucoa.svg.png" alt="Bandera de Yabucoa" class="h-8 w-auto rounded">
+        </div>
+      </div>
+      <div class="border-t border-white/10 mt-8 pt-8 text-center">
+        <p class="text-white/40 text-sm">Oficina del Legislador Municipal Hon. Irving J. Cintrón</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu on link click
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Navbar background on scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('shadow-lg');
+      } else {
+        navbar.classList.remove('shadow-lg');
+      }
+    });
+  </script>
+</body>
+</html>
